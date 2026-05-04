@@ -77,7 +77,7 @@ mixed_list = [1, "two", 3.0, True]
 print(mixed_list)  # Output: [1, 'two', 3.0, True]
 
 print(mixed_list[0])  # Output: 1
-print(mixed_list[1])  # Output: 'two'
+print(mixed_list[1])  # Output: two
 print(mixed_list[2])  # Output: 3.0
 print(mixed_list[3])  # Output: True
 
@@ -159,7 +159,7 @@ print(num_set)  # Output: {1, 2, 4, 5, 6} (discarded element)
 A = {1, 2, 3}
 B = {3, 4, 5}
 
-print(3 in A)  # Output: False (membership test)
+print(3 in A)  # Output: True (membership test)
 print(10 not in A)  # Output: True (membership test)
 
 print(A | B)  # Output: {1, 2, 3, 4, 5} (union)
