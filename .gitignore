@@ -27,3 +27,5 @@ dist/
 # System files
 .DS_Store
 Thumbs.db
+
+tutorial-ml.ipynb
