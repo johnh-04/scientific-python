@@ -1,7 +1,7 @@
 # Scientific Python — Complete Setup & Workflow Guide
 
 This project introduces a complete environment and workflow for scientific computing in Python.
-It is designed for data analysis, numerical computation, and reproducible research.
+It is designed for data analysis, numerical computation, and reproducible research, organized through a sequence of structured Jupyter Notebooks.
 
 ---
 
@@ -9,10 +9,10 @@ It is designed for data analysis, numerical computation, and reproducible resear
 
 Scientific Python refers to the ecosystem of Python libraries used for:
 
-* Data analysis
-* Numerical computation
-* Scientific modeling
-* Visualization
+* Data analysis and manipulation
+* Numerical computation and matrix calculus
+* Scientific modeling and signal processing
+* Data visualization
 * Machine learning foundations
 
 It is widely used in physics, engineering, data science, and research.
@@ -25,8 +25,10 @@ It is widely used in physics, engineering, data science, and research.
 
 **macOS / Linux**
 mkdir scientific-python
+cd scientific-python
 
 **Windows**
+mkdir scientific-python
 cd scientific-python
 
 ---
@@ -49,117 +51,83 @@ venv\Scripts\activate
 
 ### 4. Upgrade pip (recommended)
 
-pip3 install --upgrade pip
+pip install --upgrade pip
 
 ---
 
-## 📦 Core Scientific Libraries
+## 📦 Scientific Stack Installation
 
-Install the essential scientific stack:
+Install the core libraries and Jupyter core dependencies in your virtual environment:
 
-pip3 install numpy pandas matplotlib
-or
-pip3 install -r requirements.txt
+pip install numpy pandas matplotlib scipy scikit-learn jupyter
 
-### Optional (advanced use cases)
+### Alternative (using requirements file)
 
-pip3 install scipy jupyter seaborn scikit-learn
+pip install -r requirements.txt
 
 ---
 
 ## 📦 Generate dependencies
 
-After installing packages:
+After installing packages, freeze the environment to ensure reproducibility:
 
-pip3 freeze > requirements.txt
+pip freeze > requirements.txt
 
 Install later with:
 
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 
 ---
 
-## 🧪 Typical Workflow
+## 🧪 Project Workflow & Notebooks Structure
 
-### 1. Data manipulation
+The repository is structured as a progressive learning path. Each notebook covers a milestone of the scientific stack:
 
-Use **pandas** for structured data:
+### 1. Introduction
+* `01-introduction.ipynb` — Setting up the environment, Jupyter workflow, and Python core baselines.
 
-* CSV files
-* tables
-* time series
+### 2. Numerical Computing
+* `02-numpy.ipynb` — Multi-dimensional arrays (`ndarrays`), vectorization, linear algebra, and mathematical operations.
 
-### 2. Numerical computing
+### 3. Data Manipulation
+* `03-pandas.ipynb` — Structured data handling via Series and DataFrames, alignment, data cleaning, and CSV/time-series management.
 
-Use **numpy** for:
+### 4. Visualization
+* `04-matplotlib.ipynb` — Plotting architectures, functional vs object-oriented APIs, multi-panel figures, and data visualization.
 
-* arrays
-* linear algebra
-* mathematical operations
-
-### 3. Visualization
-
-Use **matplotlib** (and optionally seaborn):
-
-* plots
-* graphs
-* data visualization
+### 5. Machine Learning & Advanced Computing
+* `05-ml-foundations.ipynb` — Scientific algorithms with **SciPy** (optimization, signal processing, integration) and predictive modeling pipelines with **Scikit-Learn**.
 
 ---
 
-## ▶️ Running Python scripts
+## ▶️ Running the Notebooks
 
-python3 file.py
+Launch the local Jupyter server to explore and execute the files:
 
----
-
-## 📓 Jupyter Notebooks (recommended)
-
-Install:
-pip3 install jupyter
-
-Run:
 jupyter notebook
 
-Use notebooks for:
-
-* experiments
-* data analysis
-* visual exploration
-
----
-
-## 📁 Recommended Project Structure
-
-scientific-python/
-│── venv/ (env/)
-│── data/
-│── notebooks/
-│── src/
-│── main.py
-│── requirements.txt
-│── README.md
+Alternatively, you can open the workspace directly in **Visual Studio Code** using the Jupyter Extension.
 
 ---
 
 ## ⚠️ Best Practices
 
 * Always use a virtual environment
-* Never commit `venv/`
-* Keep dependencies minimal
-* Use notebooks for exploration, scripts for production
-* Reproducibility is key in scientific computing
+* Never commit the `venv/` folder (add it to `.gitignore`)
+* Use vectorization (NumPy/Pandas) instead of explicit python loops (`for`) for heavy computations
+* Save checkpoints and raw data separately in the `data/` folder
+* Ensure all notebook cells are executable sequentially from top to bottom
 
 ---
 
-## 🚀 Next Steps
+## 🚀 Next Steps & Application Fields
 
-Once comfortable with this stack:
+Once comfortable with this core stack, these foundations can be scaled toward:
 
-* Machine learning with scikit-learn
-* Data science pipelines
-* Scientific simulations
-* Space data analysis (astronomy, satellites, etc.)
+* Advanced Machine Learning & Deep Learning pipelines
+* Real-time Data Science and Automation systems
+* Physics simulations and astrophysics computations
+* Embedded systems and Aerospace/Satellite data processing
 
 ---
 
